@@ -159,9 +159,6 @@ if st.button('Predecir Churn'):
     data_final_for_prediction = data_num.reindex(columns=expected_cols, fill_value=0)
     scaled_data = scaler.transform(data_final_for_prediction)
 
-    # Scaling
-    scaled_data = scaler.transform(data_final_for_prediction)
-
     # Prediction
     Y_pred = random_forest_model.predict(scaled_data)
     Y_pred_decoded = label_encoder.inverse_transform(Y_pred)

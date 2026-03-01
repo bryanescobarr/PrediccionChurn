@@ -163,4 +163,4 @@ if st.button('Predecir Churn'):
     Y_pred = random_forest_model.predict(scaled_data)
     Y_pred_decoded = label_encoder.inverse_transform(Y_pred)
 
-    st.success(f"¿Existe riesgo de que el afiliado y su grupo familiar dejen de usar los servicios ofrecidos por la caja? **{Y_pred_decoded}**")
+    st.success(f"¿Existe riesgo de que el afiliado y su grupo familiar dejen de usar los servicios ofrecidos por la caja? **{Y_pred_decoded[0]}**")

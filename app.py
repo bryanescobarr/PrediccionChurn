@@ -154,7 +154,10 @@ if st.button('Predecir Churn'):
            'TamanoEmp_Pequeña empresa']
 
     # Reindex `data_num` to match `columns_final` and fill missing with 0
-    data_final_for_prediction = data_num.reindex(columns=columns_final, fill_value=0)
+    expected_cols = list(scaler.feature_names_in_)  # columnas reales del scaler entrenado
+
+    data_final_for_prediction = data_num.reindex(columns=expected_cols, fill_value=0)
+    scaled_data = scaler.transform(data_final_for_prediction)
 
     # Scaling
     scaled_data = scaler.transform(data_final_for_prediction)

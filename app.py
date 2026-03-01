@@ -28,7 +28,7 @@ EstadoCivilAfil =  st.sidebar.selectbox('Estado Civil Afiliado', ["Casado", "Sep
 GeneroAfil = st.sidebar.selectbox('Género Afiliado', ["Femenino","Masculino", "desconocido"])
 Cantidad_dependientes = st.sidebar.slider('Cantidad de Dependientes', min_value=0, max_value=20, value=0, step=1)
 cantidad_hijos = st.sidebar.slider('Cantidad de Hijos', min_value=0, max_value=20, value=0, step=1)
-SectorEmp = st.sidebar.selectbox('Sector Empleador', ["No indica","Privada", "Pública"])
+SectorEmp = st.sidebar.selectbox('Sector Empleador', ["No indica","Privada", "Pública", "Mixta"])
 SeccionEconomicaEmp = st.sidebar.selectbox('Sección Económica Empleador', ["C_Industrias Manufactureras","L_Actividades inmobiliarias","M_Act. profesionales, cie. tec",
 "N_Serv. Administra. y de apoyo","F_Construcción","G_Comercio y Rep. Automotores",
 "I_Alojamiento, serv. de comida","P_Educación","Q_Actv de atención de la Salud",
